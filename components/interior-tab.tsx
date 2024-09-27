@@ -8,7 +8,7 @@ const interiorOptions = [
     image: '/interior-1.jpg',
     price: '6,000/-',
     size: '20ft or under',
-    sizeHindi: '20 फीट या उससे कम',
+    sizeHindi: ' 20 फीट या उससे कम',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
@@ -26,7 +26,7 @@ const interiorOptions = [
     image: '/interior-2.jpg',
     price: '8,000/-',
     size: '30ft or above',
-    sizeHindi: '30 फीट या उससे अधिक',
+    sizeHindi: ' 30 फीट या उससे अधिक',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
@@ -44,7 +44,7 @@ const interiorOptions = [
     image: '/interior-3.jpg',
     price: '12,000/-',
     size: 'Corner plot 2 side Elevation',
-    sizeHindi: 'कोने का प्लॉट 2 तरफ का एलिवेशन',
+    sizeHindi: ' कोने का प्लॉट 2 तरफ का एलिवेशन',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
