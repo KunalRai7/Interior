@@ -82,7 +82,7 @@ export default function InteriorTab() {
               <CardContent className="p-4">
                 <Badge variant="secondary" className="mb-2">
                   {option.size}
-                  <span className="block text-xs mt-1">{option.sizeHindi}</span>
+                  <span className="block text-xs mt-1">&nbsp;{option.sizeHindi}</span>
                 </Badge>
                 <h3 className="text-xl font-bold mb-2">{option.price}</h3>
                 <ul className="text-sm space-y-2">

@@ -69,11 +69,11 @@ export default function BathroomTab() {
               <CardContent className="p-4">
                 <Badge variant="secondary" className="mb-2">
                   {option.price}
-                  <span className="block text-xs mt-1">{option.priceHindi}</span>
+                  <span className="block text-xs mt-1">&nbsp;{option.priceHindi}</span>
                 </Badge>
                 <h3 className="text-xl font-semibold mb-2">
                   {option.title}
-                  <span className="block text-sm font-normal">{option.titleHindi}</span>
+                  <span className="block text-sm font-normal">&nbsp;{option.titleHindi}</span>
                 </h3>
                 <ul className="text-sm space-y-2 mt-4">
                   {option.features.map((feature, featureIndex) => (
@@ -81,7 +81,7 @@ export default function BathroomTab() {
                       <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
                       <span>
                         {feature}
-                        <span className="block text-xs mt-1">{option.featuresHindi[featureIndex]}</span>
+                        <span className="block text-xs mt-1">&nbsp;{option.featuresHindi[featureIndex]}</span>
                       </span>
                     </li>
                   ))}

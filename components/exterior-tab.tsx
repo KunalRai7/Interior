@@ -43,7 +43,7 @@ export default function ExteriorTab() {
           <CardContent className="p-4">
             <Badge variant="secondary" className="mb-2">
               {exteriorDescription.title}
-              <span className="block text-xs mt-1">{exteriorDescription.titleHindi}</span>
+              <span className="block text-xs mt-1">&nbsp;{exteriorDescription.titleHindi}</span>
             </Badge>
             <ul className="text-sm space-y-2 mt-4">
               {exteriorDescription.features.map((feature, featureIndex) => (
@@ -51,7 +51,7 @@ export default function ExteriorTab() {
                   <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
                   <span>
                     {feature}
-                    <span className="block text-xs mt-1">{exteriorDescription.featuresHindi[featureIndex]}</span>
+                    <span className="block text-xs mt-1">&nbsp;{exteriorDescription.featuresHindi[featureIndex]}</span>
                   </span>
                 </li>
               ))}
