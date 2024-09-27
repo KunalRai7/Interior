@@ -20,7 +20,7 @@ export default function ServiceTabs() {
           <Building className="w-4 h-4 mr-2" /> Interior
         </TabsTrigger>
         <TabsTrigger value="bathroom">
-          <Bath className="w-4 h-4 mr-2" /> Bathroom
+          <Bath className="w-4 h-4 mr-2" /> Planning
         </TabsTrigger>
       </TabsList>
       <TabsContent value="interior">
