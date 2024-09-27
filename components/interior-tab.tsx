@@ -5,7 +5,7 @@ import { Check } from "lucide-react"
 
 const interiorOptions = [
   {
-    image: '/interior-1.jpg',
+    image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-1-la1i0urVL8RWQFrdPundPG8o0NW6SB.jpg',
     price: '6,000/-',
     size: '20ft or under',
     sizeHindi: ' 20 फीट या उससे कम',
@@ -23,7 +23,7 @@ const interiorOptions = [
     ]
   },
   {
-    image: '/interior-2.jpg',
+    image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-2-HRwGpHrTiatmSKm89CLd5pW7G6bJ3W.jpg',
     price: '8,000/-',
     size: '30ft or above',
     sizeHindi: ' 30 फीट या उससे अधिक',
@@ -41,7 +41,7 @@ const interiorOptions = [
     ]
   },
   {
-    image: '/interior-3.jpg',
+    image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-3-3Ek03znNird4rWg7C4ZsyYfn16U0rj.jpg',
     price: '12,000/-',
     size: 'Corner plot 2 side Elevation',
     sizeHindi: ' कोने का प्लॉट 2 तरफ का एलिवेशन',
@@ -65,8 +65,8 @@ export default function InteriorTab() {
     <Card>
       <CardContent className="p-4 sm:p-6">
         <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 mb-6">
-          Exterior Design
-          <span className="block text-lg font-normal mt-1">बाहरी डिजाइन</span>
+          Interior Design
+          <span className="block text-lg font-normal mt-1">आंतरिक डिजाइन</span>
         </h2>
         
         <div className="grid gap-8 md:grid-cols-3">
