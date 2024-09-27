@@ -14,10 +14,10 @@ export default function ServiceTabs() {
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-3xl mx-auto">
       <TabsList className="grid w-full grid-cols-3 mb-2">
         <TabsTrigger value="interior">
-          <Home className="w-4 h-4 mr-2" /> Interior
+          <Home className="w-4 h-4 mr-2" /> Exterior
         </TabsTrigger>
         <TabsTrigger value="exterior">
-          <Building className="w-4 h-4 mr-2" /> Exterior
+          <Building className="w-4 h-4 mr-2" /> Interior
         </TabsTrigger>
         <TabsTrigger value="bathroom">
           <Bath className="w-4 h-4 mr-2" /> Bathroom
