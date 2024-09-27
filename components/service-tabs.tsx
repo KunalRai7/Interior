@@ -5,7 +5,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import InteriorTab from './interior-tab'
 import ExteriorTab from './exterior-tab'
 import BathroomTab from './bathroom-tab'
-import { Home, Building, Bath } from 'lucide-react'  // Import the icons
+import { Home, Building, Notebook } from 'lucide-react'  // Updated import
 
 export default function ServiceTabs() {
   const [activeTab, setActiveTab] = useState('interior')
@@ -19,8 +19,8 @@ export default function ServiceTabs() {
         <TabsTrigger value="exterior">
           <Building className="w-4 h-4 mr-2" /> Interior
         </TabsTrigger>
-        <TabsTrigger value="bathroom">
-          <Bath className="w-4 h-4 mr-2" /> Planning
+        <TabsTrigger value="planning">
+          <Notebook className="w-4 h-4 mr-2" /> Planning
         </TabsTrigger>
       </TabsList>
       <TabsContent value="interior">
@@ -29,7 +29,7 @@ export default function ServiceTabs() {
       <TabsContent value="exterior">
         <ExteriorTab />
       </TabsContent>
-      <TabsContent value="bathroom">
+      <TabsContent value="planning">
         <BathroomTab />
       </TabsContent>
     </Tabs>
