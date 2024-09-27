@@ -1,4 +1,4 @@
-import WatermarkedImage from './WatermarkedImage'
+import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
@@ -52,7 +52,7 @@ export default function InteriorTab() {
         <div className="grid gap-8 md:grid-cols-3">
           {interiorOptions.map((option, index) => (
             <Card key={index} className="overflow-hidden transition-shadow hover:shadow-lg">
-              <WatermarkedImage
+              <Image
                 src={option.image}
                 alt={`Interior design option ${index + 1}`}
                 width={400}
