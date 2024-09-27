@@ -1,5 +1,7 @@
 import WatermarkedImage from './WatermarkedImage'
 import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Check } from "lucide-react"
 
 const interiorOptions = [
   {
@@ -41,30 +43,35 @@ export default function InteriorTab() {
   return (
     <Card>
       <CardContent className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">Interior Design</h2>
-        <p className="text-sm sm:text-base text-muted-foreground mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Interior Design</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-8">
           Transform your living spaces with our expert interior design services. 
           We create harmonious and functional interiors that reflect your personal style.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {interiorOptions.map((option, index) => (
-            <div key={index} className="overflow-hidden">
+            <Card key={index} className="overflow-hidden transition-shadow hover:shadow-lg">
               <WatermarkedImage
                 src={option.image}
                 alt={`Interior design option ${index + 1}`}
                 width={400}
                 height={300}
-                className="w-full h-48 object-cover mb-4"
+                className="w-full h-48 object-cover"
               />
-              <h3 className="text-lg font-semibold mb-2">{option.price}</h3>
-              <p className="text-sm text-muted-foreground mb-2">{option.size}</p>
-              <ul className="text-sm space-y-1">
-                {option.features.map((feature, featureIndex) => (
-                  <li key={featureIndex}>{feature}</li>
-                ))}
-              </ul>
-            </div>
+              <CardContent className="p-4">
+                <Badge variant="secondary" className="mb-2">{option.size}</Badge>
+                <h3 className="text-xl font-bold mb-2">{option.price}</h3>
+                <ul className="text-sm space-y-2">
+                  {option.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </CardContent>
