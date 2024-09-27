@@ -65,7 +65,7 @@ export default function ExteriorTab() {
 
 
       <CardContent className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 mb-6">
+        <h2 className="text-xl sm:text-2xl font-extrabold mb-2 sm:mb-4 mb-6">
           Kitchen Design
           <span className="block text-lg font-normal mt-1">किचन डिजाइन</span>
         </h2>
