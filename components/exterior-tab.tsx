@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
 
 const exteriorDescription = {
-  image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-05-53-9Smj0eXKZwxSKHlRmqduQxUOplnZMq.jpg',
+  image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-59-35-nZine5QYZacSdOOBIC1LhEpby9sw9n.jpg',
   title: '3D Design Rate',
   titleHindi: '3D डिजाइन दर',
   features: [
