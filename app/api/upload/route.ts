@@ -8,7 +8,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     const jsonResponse = await handleUpload({
       body,
       request,
-      onBeforeGenerateToken: async (pathname: string) => {
+      onBeforeGenerateToken: async (_pathname: string) => {
         // This is where you could check user authentication
         return {
           allowedContentTypes: ['image/jpeg', 'image/png', 'image/gif'],
