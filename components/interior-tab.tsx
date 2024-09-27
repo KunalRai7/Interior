@@ -43,8 +43,8 @@ export default function InteriorTab() {
   return (
     <Card>
       <CardContent className="p-4 sm:p-6">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Interior Design</h2>
-        <p className="text-sm sm:text-base text-muted-foreground mb-8">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">Interior Design</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-6">
           Transform your living spaces with our expert interior design services. 
           We create harmonious and functional interiors that reflect your personal style.
         </p>
