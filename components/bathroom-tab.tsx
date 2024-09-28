@@ -5,7 +5,7 @@ import { Check } from "lucide-react"
 
 const planningOptions = [
   {
-    image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-18-24-EGOAWLEFwjc78V4JqOJKHlAmcD7M8m.jpg',
+    image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-18-24%20(1)-iSvg3IWxOO8dUVQx9nGsXGDQm8IG7H.jpg',
     price: '4 Rupees per square feet',
     priceHindi: '4 रुपये प्रति वर्ग फुट',
     title: '1st Plan',
@@ -59,7 +59,7 @@ export default function BathroomTab() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {planningOptions.map((option, index) => (
             <Card key={index} className="overflow-hidden transition-shadow hover:shadow-lg">
-              <div className="relative w-full pt-[100%]">
+              <div className="relative w-full pt-[120%]">
                 <Image
                   src={option.image}
                   alt={option.title}
