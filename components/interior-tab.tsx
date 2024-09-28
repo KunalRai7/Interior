@@ -25,8 +25,8 @@ const interiorOptions = [
   {
     image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-2-HRwGpHrTiatmSKm89CLd5pW7G6bJ3W.jpg',
     price: '8,000/-',
-    size: '30ft or above',
-    sizeHindi: ' 30 फीट या उससे अधिक',
+    size: '21ft or above',
+    sizeHindi: ' 21 फीट या उससे अधिक',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
