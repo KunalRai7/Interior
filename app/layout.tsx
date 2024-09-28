@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito, Dancing_Script } from 'next/font/google'
 import Footer from './components/Footer'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 const nunito = Nunito({ 
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.className} min-h-screen bg-background flex flex-col`}>
+        <GoogleAnalytics />
         <div className="flex-grow">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="py-4 sm:py-6">
