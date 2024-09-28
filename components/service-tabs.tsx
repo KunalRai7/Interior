@@ -1,12 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import InteriorTab from './interior-tab'
-import ExteriorTab from './exterior-tab'
-import BathroomTab from './bathroom-tab'
-import WorkTab from './work-tab'  // Add this import
-import { Home, Building, Notebook, Image } from 'lucide-react'  // Added Image icon
+import { Home, Building, Notebook, Image } from 'lucide-react'
+import dynamic from 'next/dynamic'
+
+const InteriorTab = dynamic(() => import('./interior-tab'), { 
+  loading: () => <p>Loading...</p>
+})
+const ExteriorTab = dynamic(() => import('./exterior-tab'), { 
+  loading: () => <p>Loading...</p>
+})
+const BathroomTab = dynamic(() => import('./bathroom-tab'), { 
+  loading: () => <p>Loading...</p>
+})
+const WorkTab = dynamic(() => import('./work-tab'), { 
+  loading: () => <p>Loading...</p>
+})
 
 export default function ServiceTabs() {
   const [activeTab, setActiveTab] = useState('interior')
@@ -27,18 +37,20 @@ export default function ServiceTabs() {
           <Image className="w-4 h-4 mr-2" /> Work
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="interior">
-        <InteriorTab />
-      </TabsContent>
-      <TabsContent value="exterior">
-        <ExteriorTab />
-      </TabsContent>
-      <TabsContent value="planning">
-        <BathroomTab />
-      </TabsContent>
-      <TabsContent value="work">
-        <WorkTab />
-      </TabsContent>
+      <Suspense fallback={<div>Loading...</div>}>
+        <TabsContent value="interior">
+          <InteriorTab />
+        </TabsContent>
+        <TabsContent value="exterior">
+          <ExteriorTab />
+        </TabsContent>
+        <TabsContent value="planning">
+          <BathroomTab />
+        </TabsContent>
+        <TabsContent value="work">
+          <WorkTab />
+        </TabsContent>
+      </Suspense>
     </Tabs>
   )
 }

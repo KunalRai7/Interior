@@ -12,7 +12,17 @@ const dancingScript = Dancing_Script({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Shehzaan Interior & Construction Company',
-  description: 'Expert interior, exterior, and bathroom design services',
+  description: 'Expert interior, exterior, and bathroom design services in Bhopal, MP India',
+  keywords: ['interior design', 'construction', 'Bhopal', 'bathroom design', 'exterior design'],
+  authors: [{ name: 'Shehzaan Interior & Construction Company' }],
+  openGraph: {
+    title: 'Shehzaan Interior & Construction Company',
+    description: 'Expert interior, exterior, and bathroom design services in Bhopal, MP India',
+    url: 'https://www.shehzaaninterior.com',
+    siteName: 'Shehzaan Interior & Construction Company',
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

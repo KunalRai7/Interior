@@ -21,6 +21,9 @@ export default function WatermarkedImage({ src, alt, width, height, className }:
         height={height}
         className={className}
         onLoadingComplete={() => setImageLoaded(true)}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
       />
       {imageLoaded && (
         <Image

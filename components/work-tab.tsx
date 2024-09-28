@@ -35,6 +35,9 @@ export default function WorkTab() {
                 width={300}
                 height={200}
                 className="w-full h-40 object-cover rounded-lg"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
               />
             </div>
           ))}
