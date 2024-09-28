@@ -37,7 +37,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="py-4 sm:py-6">
               <h1>
-                <span className={`block slate-900 text-center text-4xl ${dancingScript.className}`}>Shehzaan</span>
+                <span className={`block slate-900 text-center text-5xl ${dancingScript.className}`}>Shehzaan</span>
                 <span className="block text-center font-semibold whitespace-nowrap text-sm">Interior & Construction Company</span>
               </h1>
             </header>
