@@ -3,9 +3,15 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'trb9yrhq5p76ro9s.public.blob.vercel-storage.com',
-      'localhost'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'trb9yrhq5p76ro9s.public.blob.vercel-storage.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
   },
