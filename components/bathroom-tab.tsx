@@ -50,22 +50,23 @@ const planningOptions = [
 
 export default function BathroomTab() {
   return (
-    <Card>
-      <CardContent className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-extrabold mb-2 sm:mb-4 mb-6">
+    <Card className="h-full">
+      <CardContent className="p-4 sm:p-6 h-full overflow-y-auto">
+        <h2 className="text-xl sm:text-2xl font-extrabold mb-6">
           Planning Options
           <span className="block text-lg font-normal mt-1">योजना विकल्प</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {planningOptions.map((option, index) => (
             <Card key={index} className="overflow-hidden transition-shadow hover:shadow-lg">
-              <Image
-                src={option.image}
-                alt={option.title}
-                width={800}
-                height={600}
-                className="w-full h-64 object-cover"
-              />
+              <div className="relative w-full pt-[100%]">
+                <Image
+                  src={option.image}
+                  alt={option.title}
+                  fill
+                  className="rotate-image"
+                />
+              </div>
               <CardContent className="p-4">
                 <Badge variant="secondary" className="mb-2">
                   {option.price}

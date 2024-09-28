@@ -47,109 +47,114 @@ const bathroomDescription = {
 
 export default function ExteriorTab() {
   return (
-    <Card>
-      <CardContent className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-extrabold mb-2 sm:mb-4 mb-6">
-          Interior Design
-          <span className="block text-lg font-normal mt-1">अंदरूनी डिजाइन</span>
-        </h2>
-        
-        <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-          <Image
-            src={exteriorDescription.image}
-            alt="Exterior design"
-            width={800}
-            height={600}
-            className="w-full h-64 object-cover"
-          />
-          <CardContent className="p-4">
-            <Badge variant="secondary" className="mb-2">
-              {exteriorDescription.title}
-              <span className="block text-xs mt-1">&nbsp;{exteriorDescription.titleHindi}</span>
-            </Badge>
-            <ul className="text-sm space-y-2 mt-4">
-              {exteriorDescription.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-start">
-                  <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
-                    {feature}
-                    <span className="block text-xs mt-1">&nbsp;{exteriorDescription.featuresHindi[featureIndex]}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      </CardContent>
+    <Card className="h-full">
+      <CardContent className="p-4 sm:p-6 h-full overflow-y-auto">
+        <div className="space-y-8">
+          {/* Interior Design Section */}
+          <section>
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-4">
+              Interior Design
+              <span className="block text-lg font-normal mt-1">अंदरूनी डिजाइन</span>
+            </h2>
+            
+            <Card className="overflow-hidden transition-shadow hover:shadow-lg">
+              <Image
+                src={exteriorDescription.image}
+                alt="Exterior design"
+                width={800}
+                height={600}
+                className="w-full h-64 object-cover"
+              />
+              <CardContent className="p-4">
+                <Badge variant="secondary" className="mb-2">
+                  {exteriorDescription.title}
+                  <span className="block text-xs mt-1">&nbsp;{exteriorDescription.titleHindi}</span>
+                </Badge>
+                <ul className="text-sm space-y-2 mt-4">
+                  {exteriorDescription.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>
+                        {feature}
+                        <span className="block text-xs mt-1">&nbsp;{exteriorDescription.featuresHindi[featureIndex]}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </section>
 
+          {/* Kitchen Design Section */}
+          <section>
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-4">
+              Kitchen Design
+              <span className="block text-lg font-normal mt-1">किचन डिजाइन</span>
+            </h2>
+            
+            <Card className="overflow-hidden transition-shadow hover:shadow-lg">
+              <Image
+                src={kitchenImage}
+                alt="Kitchen design"
+                width={800}
+                height={600}
+                className="w-full h-64 object-cover"
+              />
+              <CardContent className="p-4">
+                <Badge variant="secondary" className="mb-2">
+                  {exteriorDescription.title}
+                  <span className="block text-xs mt-1">&nbsp;{exteriorDescription.titleHindi}</span>
+                </Badge>
+                <ul className="text-sm space-y-2 mt-4">
+                  {exteriorDescription.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>
+                        {feature}
+                        <span className="block text-xs mt-1">&nbsp;{exteriorDescription.featuresHindi[featureIndex]}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </section>
 
-
-      <CardContent className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-extrabold mb-2 sm:mb-4 mb-6">
-          Kitchen Design
-          <span className="block text-lg font-normal mt-1">किचन डिजाइन</span>
-        </h2>
-        
-        <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-          <Image
-            src={kitchenImage}
-            alt="Kitchen design"
-            width={800}
-            height={600}
-            className="w-full h-64 object-cover"
-          />
-          <CardContent className="p-4">
-            <Badge variant="secondary" className="mb-2">
-              {exteriorDescription.title}
-              <span className="block text-xs mt-1">&nbsp;{exteriorDescription.titleHindi}</span>
-            </Badge>
-            <ul className="text-sm space-y-2 mt-4">
-              {exteriorDescription.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-start">
-                  <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
-                    {feature}
-                    <span className="block text-xs mt-1">&nbsp;{exteriorDescription.featuresHindi[featureIndex]}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      </CardContent>
-
-      <CardContent className="p-4 sm:p-6">
-        <h2 className="text-xl sm:text-2xl font-extrabold mb-2 sm:mb-4 mb-6">
-          Bathroom Design
-          <span className="block text-lg font-normal mt-1">बाथरूम डिजाइन</span>
-        </h2>
-        
-        <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-          <Image
-            src={bathroomImage}
-            alt="Bathroom design"
-            width={800}
-            height={600}
-            className="w-full h-64 object-cover"
-          />
-          <CardContent className="p-4">
-            <Badge variant="secondary" className="mb-2">
-              {bathroomDescription.title}
-              <span className="block text-xs mt-1">&nbsp;{bathroomDescription.titleHindi}</span>
-            </Badge>
-            <ul className="text-sm space-y-2 mt-4">
-              {bathroomDescription.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-start">
-                  <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
-                    {feature}
-                    <span className="block text-xs mt-1">&nbsp;{bathroomDescription.featuresHindi[featureIndex]}</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+          {/* Bathroom Design Section */}
+          <section>
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-4">
+              Bathroom Design
+              <span className="block text-lg font-normal mt-1">बाथरूम डिजाइन</span>
+            </h2>
+            
+            <Card className="overflow-hidden transition-shadow hover:shadow-lg">
+              <Image
+                src={bathroomImage}
+                alt="Bathroom design"
+                width={800}
+                height={600}
+                className="w-full h-64 object-cover"
+              />
+              <CardContent className="p-4">
+                <Badge variant="secondary" className="mb-2">
+                  {bathroomDescription.title}
+                  <span className="block text-xs mt-1">&nbsp;{bathroomDescription.titleHindi}</span>
+                </Badge>
+                <ul className="text-sm space-y-2 mt-4">
+                  {bathroomDescription.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="mr-2 h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>
+                        {feature}
+                        <span className="block text-xs mt-1">&nbsp;{bathroomDescription.featuresHindi[featureIndex]}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </section>
+        </div>
       </CardContent>
     </Card>
   )

@@ -13,13 +13,13 @@ export default function ServiceTabs() {
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-3xl mx-auto">
       <TabsList className="grid w-full grid-cols-3 mb-2">
-        <TabsTrigger value="interior">
+        <TabsTrigger value="interior" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
           <Home className="w-4 h-4 mr-2" /> Exterior
         </TabsTrigger>
-        <TabsTrigger value="exterior">
+        <TabsTrigger value="exterior" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
           <Building className="w-4 h-4 mr-2" /> Interior
         </TabsTrigger>
-        <TabsTrigger value="planning">
+        <TabsTrigger value="planning" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
           <Notebook className="w-4 h-4 mr-2" /> Planning
         </TabsTrigger>
       </TabsList>
