@@ -24,7 +24,7 @@ export default function ServiceTabs() {
           <Notebook className="w-4 h-4 mr-2" /> Planning
         </TabsTrigger>
         <TabsTrigger value="work" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-          <Image className="w-4 h-4 mr-2" /> Work
+          <Image className="w-4 h-4 mr-2" src="/path-to-icon.png" alt="Icon description" /> Work
         </TabsTrigger>
       </TabsList>
       <TabsContent value="interior">
