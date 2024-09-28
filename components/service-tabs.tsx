@@ -7,7 +7,6 @@ import InteriorTab from './interior-tab'
 import ExteriorTab from './exterior-tab'
 import BathroomTab from './bathroom-tab'
 import WorkTab from './work-tab'
-import Image from 'next/image'
 
 export default function ServiceTabs() {
   const [activeTab, setActiveTab] = useState('interior')
