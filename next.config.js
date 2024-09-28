@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '*.public.blob.vercel-storage.com',
-      },
+    domains: [
+      'placehold.co',
+      'trb9yrhq5p76ro9s.public.blob.vercel-storage.com'
     ],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

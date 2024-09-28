@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
 import { useState } from 'react'
-import { ImageModal } from './ImageModal'
 
 const planningOptions = [
   {
@@ -49,8 +48,6 @@ const planningOptions = [
 ]
 
 export default function BathroomTab() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
-
   return (
     <Card className="h-full">
       <CardContent className="p-4 sm:p-6 h-full overflow-y-auto">
@@ -62,8 +59,7 @@ export default function BathroomTab() {
           {planningOptions.map((option, index) => (
             <Card key={index} className="overflow-hidden transition-shadow hover:shadow-lg">
               <div 
-                className="relative w-full pt-[120%] cursor-pointer"
-                onClick={() => setSelectedImage(option.image)}
+                className="relative w-full pt-[120%]"
               >
                 <Image
                   src={option.image}
@@ -97,12 +93,6 @@ export default function BathroomTab() {
           ))}
         </div>
       </CardContent>
-      <ImageModal
-        isOpen={!!selectedImage}
-        onClose={() => setSelectedImage(null)}
-        imageSrc={selectedImage || ''}
-        imageAlt="Planning Option"
-      />
     </Card>
   )
 }
