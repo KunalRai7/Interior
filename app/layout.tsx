@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Shehzaan Interior & Construction Company',
     description: 'Expert interior, exterior, and bathroom design services in Bhopal, MP India',
-    url: 'https://www.shehzaaninterior.com',
+    url: 'https://www.shehzaan.com',
     siteName: 'Shehzaan Interior & Construction Company',
     locale: 'en_US',
     type: 'website',
