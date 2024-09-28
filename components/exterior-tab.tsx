@@ -6,7 +6,7 @@ import { Check } from "lucide-react"
 const exteriorDescription = {
   image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-59-35-nZine5QYZacSdOOBIC1LhEpby9sw9n.jpg',
   title: '3D Design Rate',
-  titleHindi: '3D डिजाइन दर',
+  titleHindi: '3D डिजाइन रेट',
   features: [
     '1 Room design rate - 4,000/-',
     'More than 2 room rate - 3,000/- per room',
@@ -15,11 +15,11 @@ const exteriorDescription = {
     '50% payment must be in advance',
   ],
   featuresHindi: [
-    '1 कमरे का डिजाइन दर - 4,000/-',
-    '2 से अधिक कमरों का दर - 3,000/- प्रति कमरा',
-    '2D आयामों के साथ 3D डिजाइन',
-    '3 परिवर्तन उपलब्ध',
-    '50% भुगतान अग्रिम होना चाहिए',
+    '1 कमरे के डिज़ाइन का रेट - 4,000/-',
+    '2 से ज्यादा कामरो के डिजाइन का रेट 3,000/- एक रूम',
+    '3डी व्यू 2डी प्लानिंग के साथ',
+    '3 परिवर्तन करवा सकते हैं',
+    '50% एडवांस देना अनिवार्य है',
   ]
 }
 
@@ -28,7 +28,7 @@ const bathroomImage = 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/p
 
 const bathroomDescription = {
   title: '3D Design Rate',
-  titleHindi: '3D डिजाइन दर',
+  titleHindi: '3D डिजाइन रेट',
   features: [
     '3,000/- bathroom design',
     '3 changes available',
@@ -38,10 +38,10 @@ const bathroomDescription = {
   ],
   featuresHindi: [
     '3,000/- बाथरूम डिजाइन',
-    '3 परिवर्तन उपलब्ध',
-    '2D कार्य आयाम',
-    '50% अग्रिम होना चाहिए',
-    'कार्य अवधि - 5-8 दिन',
+    '3 परिवर्तन करवा सकते हैं',
+    '2डी कार्य प्रणाली',
+    '50% एडवांस देना अनिवार्य है',
+    '5-8 दिन के बीच काम पूरा कर दिया जाएगा',
   ]
 }
 

@@ -16,8 +16,8 @@ const planningOptions = [
       'Includes Column & beam drawings'
     ],
     featuresHindi: [
-      '2डी योजना',
-      '3 परिवर्तन उपलब्ध',
+      '2डी प्लानिंग',
+      '3 परिवर्तन करवा सकते हैं',
       'स्तंभ और बीम चित्र शामिल हैं'
     ]
   },
@@ -36,7 +36,7 @@ const planningOptions = [
       'Loha jaal drawing'
     ],
     featuresHindi: [
-      '2डी योजना',
+      '2डी प्लानिंग',
       'स्तंभ और बीम चित्र शामिल हैं',
       'इलेक्ट्रीशियन ड्राइंग',
       'प्लंबिंग ड्राइंग',
