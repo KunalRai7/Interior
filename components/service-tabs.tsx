@@ -2,11 +2,12 @@
 
 import { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Home, Building, Notebook, Image } from 'lucide-react'
+import { Home, Building, Notebook, Briefcase } from 'lucide-react'
 import InteriorTab from './interior-tab'
 import ExteriorTab from './exterior-tab'
 import BathroomTab from './bathroom-tab'
 import WorkTab from './work-tab'
+import Image from 'next/image'
 
 export default function ServiceTabs() {
   const [activeTab, setActiveTab] = useState('interior')
@@ -15,16 +16,16 @@ export default function ServiceTabs() {
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-3xl mx-auto">
       <TabsList className="grid w-full grid-cols-4 mb-2">
         <TabsTrigger value="interior" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-          <Home className="w-4 h-4 mr-2" /> Exterior
+          <Home className="w-4 h-4 mr-2" /> Interior
         </TabsTrigger>
         <TabsTrigger value="exterior" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-          <Building className="w-4 h-4 mr-2" /> Interior
+          <Building className="w-4 h-4 mr-2" /> Exterior
         </TabsTrigger>
         <TabsTrigger value="planning" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
           <Notebook className="w-4 h-4 mr-2" /> Planning
         </TabsTrigger>
         <TabsTrigger value="work" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-          <Image className="w-4 h-4 mr-2" src="/path-to-icon.png" alt="Icon description" /> Work
+          <Briefcase className="w-4 h-4 mr-2" /> Work
         </TabsTrigger>
       </TabsList>
       <TabsContent value="interior">
