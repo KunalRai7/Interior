@@ -2,12 +2,73 @@ import { MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import Marquee from "@/components/ui/marquee"
+import { cn } from "@/lib/utils"
+
+// ... existing imports ...
+
+const reviews = [
+  {
+    name: "राजेश कुमार",
+    body: "शेहज़ान इंटीरियर ने मेरे घर को एक सपने में बदल दिया है। उनकी क्रिएटिविटी और प्रोफेशनलिज्म अद्भुत है।",
+    img: "https://avatar.vercel.sh/rajesh",
+  },
+  {
+    name: "Priya Sharma",
+    body: "I'm absolutely thrilled with the transformation of my office space. Shehzaan Interior's attention to detail is impeccable!",
+    img: "https://avatar.vercel.sh/priya",
+  },
+  {
+    name: "अमित पटेल",
+    body: "बजट के अनुसार उत्कृष्ट काम। टीम बहुत सहयोगी थी और समय पर प्रोजेक्ट पूरा किया। बहुत खुश हूँ!",
+    img: "https://avatar.vercel.sh/amit",
+  },
+  {
+    name: "Neha Gupta",
+    body: "The team at Shehzaan Interior is incredibly talented. They turned my outdated kitchen into a modern masterpiece!",
+    img: "https://avatar.vercel.sh/neha",
+  },
+  {
+    name: "संजय वर्मा",
+    body: "मेरे रेस्तरां का इंटीरियर देखकर ग्राहक दंग रह जाते हैं। शेहज़ान इंटीरियर का बहुत-बहुत धन्यवाद!",
+    img: "https://avatar.vercel.sh/sanjay",
+  },
+  {
+    name: "Anita Desai",
+    body: "From concept to execution, Shehzaan Interior exceeded all my expectations. Truly a 5-star experience!",
+    img: "https://avatar.vercel.sh/anita",
+  },
+];
+
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+
+// ... existing Footer component code ...
 
 export default function Footer() {
   return (
     <footer className="py-8 mt-auto">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto md:max-w-4xl lg:max-w-5xl">
+          {/* Review Slider */}
+          <div className="mb-8">
+            <h3 className="text-xl font-bold mb-4">What our customers say:</h3>
+            <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
+              <Marquee pauseOnHover className="[--duration:40s]">
+                {firstRow.map((review) => (
+                  <ReviewCard key={review.name} {...review} />
+                ))}
+              </Marquee>
+              <Marquee reverse pauseOnHover className="[--duration:40s]">
+                {secondRow.map((review) => (
+                  <ReviewCard key={review.name} {...review} />
+                ))}
+              </Marquee>
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
+            </div>
+          </div>
+
           {/* CTA Card */}
           <Card className="mb-8 overflow-hidden transition-shadow hover:shadow-lg">
             <CardContent className="p-6">
@@ -54,5 +115,24 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  )
+}
+function ReviewCard({ name, body, img }: { name: string; body: string; img: string }) {
+  return (
+    <figure
+      className={cn(
+        "relative w-64 mx-2 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <figcaption className="text-sm font-medium dark:text-white">
+          {name}
+        </figcaption>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
   )
 }
