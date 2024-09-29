@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Marquee from "@/components/ui/marquee"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 // ... existing imports ...
 
@@ -127,7 +128,14 @@ function ReviewCard({ name, body, img }: { name: string; body: string; img: stri
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image 
+          className="rounded-full" 
+          width={32} 
+          height={32} 
+          alt={`${name}'s avatar`} 
+          src={img}
+          unoptimized // Add this prop
+        />
         <figcaption className="text-sm font-medium dark:text-white">
           {name}
         </figcaption>
