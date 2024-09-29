@@ -12,7 +12,7 @@ const interiorOptions = [
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-42-n7vevMPkCxSJgPPetQYMSSkDXu4Zo3.jpg',
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-45-JDRPc55wUFnerk5uWkVHhNgalNujDI.jpg'
     ],
-    price: '6,000/-',
+    price: '₹6,000/-',
     size: '20ft or under',
     sizeHindi: ' 20 फीट या उससे कम',
     features: [
@@ -35,7 +35,7 @@ const interiorOptions = [
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-08-30-5EAFd4mKTuOt0Ei2283eMMl3SrXFFM.jpg',
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-08-33-UY13g5A6nLifnZqyulNhRrU9LSXhJj.jpg'
     ],
-    price: '8,000/-',
+    price: '₹8,000/-',
     size: '21ft or above',
     sizeHindi: ' 21 फीट या उससे अधिक',
     features: [
@@ -58,7 +58,7 @@ const interiorOptions = [
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-09-31-qAHFjtpYmNUVI7edEZvSJzFvsNAqdI.jpg',
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-09-34-1khowpj3psGOQp1DU5aBUIuGodVLpJ.jpg'
     ],
-    price: '12,000/-',
+    price: '₹12,000/-',
     size: 'Corner plot 2 side Elevation',
     sizeHindi: ' कोने का प्लॉट 2 तरफ का एलिवेशन',
     features: [
