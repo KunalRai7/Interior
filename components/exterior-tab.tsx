@@ -2,9 +2,16 @@ import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
+import useEmblaCarousel from 'embla-carousel-react'
+import { useCallback, useEffect, useState } from 'react'
 
 const exteriorDescription = {
-  image: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-59-35-nZine5QYZacSdOOBIC1LhEpby9sw9n.jpg',
+  images: [
+    'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-59-35-nZine5QYZacSdOOBIC1LhEpby9sw9n.jpg',
+    'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-22-19-gueC1KstkymuIdX4KpUVscZ0OqDyPT.jpg',
+    'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-22-22-YMetdLkBBpv6NTbXobB3i7bM0Bv4KY.jpg',
+    'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-22-25-KSwuoflN9Go2KnnN9riG3qItPSb2BB.jpg',
+  ],
   title: '3D Design Rate',
   titleHindi: '3D डिजाइन रेट',
   features: [
@@ -23,7 +30,13 @@ const exteriorDescription = {
   ]
 }
 
-const kitchenImage = 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-45-42-XBGSFM10SFZUpO1Lq93bAEYtGe7Vm6.jpg'
+const kitchenImages = [
+  'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-45-42-XBGSFM10SFZUpO1Lq93bAEYtGe7Vm6.jpg',
+  'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-24-34-3cSqO2WIZJU2kqKZft5XVqAOE2hZTV.jpg',
+  'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-24-37-u1cajL7w2XkEpZRFpw8veONc3mSmYV.jpg',
+  'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-24-40-7jeP9v5ugrxjPcVC2GcziOzzR9AfVm.jpg',
+]
+
 const bathroomImage = 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_17-16-46-UEmQ8GCmRMc12yKSitXUR9NOXUd8GS.jpg'
 
 const bathroomDescription = {
@@ -45,6 +58,62 @@ const bathroomDescription = {
   ]
 }
 
+function ImageCarousel({ images }: { images: string[] }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  const scrollTo = useCallback((index: number) => {
+    if (emblaApi) emblaApi.scrollTo(index)
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap())
+    }
+
+    emblaApi.on('select', onSelect)
+    onSelect()
+
+    return () => {
+      emblaApi.off('select', onSelect)
+    }
+  }, [emblaApi])
+
+  return (
+    <div className="relative w-full h-full">
+      <div className="embla overflow-hidden absolute inset-0" ref={emblaRef}>
+        <div className="embla__container flex h-full">
+          {images.map((image, imgIndex) => (
+            <div key={imgIndex} className="embla__slide flex-[0_0_100%] relative h-full">
+              <Image
+                src={image}
+                alt={`Image ${imgIndex + 1}`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+        {images.map((_, dotIndex) => (
+          <button
+            key={dotIndex}
+            className={`w-2 h-2 mx-1 rounded-full transition-all duration-200 ${
+              dotIndex === selectedIndex ? 'bg-white' : 'bg-white bg-opacity-50'
+            }`}
+            onClick={() => scrollTo(dotIndex)}
+            aria-label={`Go to slide ${dotIndex + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function ExteriorTab() {
   return (
     <Card className="h-full">
@@ -58,13 +127,9 @@ export default function ExteriorTab() {
             </h2>
             
             <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-              <Image
-                src={exteriorDescription.image}
-                alt="Exterior design"
-                width={800}
-                height={600}
-                className="w-full h-64 object-cover"
-              />
+              <div className="aspect-[4/3] relative">
+                <ImageCarousel images={exteriorDescription.images} />
+              </div>
               <CardContent className="p-4">
                 <Badge variant="secondary" className="mb-2">
                   {exteriorDescription.title}
@@ -93,13 +158,9 @@ export default function ExteriorTab() {
             </h2>
             
             <Card className="overflow-hidden transition-shadow hover:shadow-lg">
-              <Image
-                src={kitchenImage}
-                alt="Kitchen design"
-                width={800}
-                height={600}
-                className="w-full h-64 object-cover"
-              />
+              <div className="aspect-[4/3] relative">
+                <ImageCarousel images={kitchenImages} />
+              </div>
               <CardContent className="p-4">
                 <Badge variant="secondary" className="mb-2">
                   {exteriorDescription.title}
