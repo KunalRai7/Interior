@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   },
 }
 
+// Set to true to show payment notice and block the entire site
+const SITE_SUSPENDED = true
+
 export default function RootLayout({
   children,
 }: {
@@ -35,18 +38,25 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunito.className} min-h-screen bg-background flex flex-col`}>
         <GoogleAnalytics />
-        <div className="flex-grow">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="pt-4 sm:pt-6">
-              <h1>
-                <span className={`block slate-900 text-center text-5xl ${dancingScript.className}`}>Shehzaan</span>
-                <span className="block text-center font-semibold whitespace-nowrap text-sm">Interior & Construction Company</span>
-              </h1>
-            </header>
-            <main>{children}</main>
-          </div>
-        </div>
-        <Footer />
+        {SITE_SUSPENDED ? (
+          // Only render children (payment notice) when suspended
+          <main>{children}</main>
+        ) : (
+          <>
+            <div className="flex-grow">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header className="pt-4 sm:pt-6">
+                  <h1>
+                    <span className={`block slate-900 text-center text-5xl ${dancingScript.className}`}>Shehzaan</span>
+                    <span className="block text-center font-semibold whitespace-nowrap text-sm">Interior & Construction Company</span>
+                  </h1>
+                </header>
+                <main>{children}</main>
+              </div>
+            </div>
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   )
